@@ -21,6 +21,9 @@ app.use('/api/v1/users',require('./api/v1/routes/users.routes')); //Ruta para Us
 app.use('/api/v1/articles',require('./api/v1/routes/articles.routes')); //Ruta para Articles con la version 1 de la API
 app.use('/api/v1/categories',require('./api/v1/routes/categories.routes')); //Ruta para Articles con la version 1 de la API
 
+app.get('/api/v1/test', (req, res) => {
+    res.send('Hello ADSO !!!')
+})
 
 //Starting de Server
 app.listen(app.get('port'),()=>{
